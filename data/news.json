@@ -1,17 +1,26 @@
 [
     {
-        "title": "New Malware Attack Targets Windows Users",
-        "description": "A new strain of malware has been discovered targeting Windows users. Experts advise updating your system immediately.",
-        "link": "https://example.com/malware-news"
+        "title": "New Malware Strain Targets Windows Users",
+        "description": "A new strain of malware has been discovered, targeting Windows users and stealing sensitive data.",
+        "link": "https://example.com/malware-news",
+        "category": "malware"
     },
     {
-        "title": "Major Data Breach at XYZ Corporation",
-        "description": "XYZ Corporation has reported a data breach affecting millions of users. Sensitive information may have been compromised.",
-        "link": "https://example.com/data-breach-news"
+        "title": "Major Data Breach at Tech Company XYZ",
+        "description": "Tech Company XYZ has reported a major data breach, exposing millions of user records.",
+        "link": "https://example.com/data-breach-news",
+        "category": "data-breaches"
     },
     {
         "title": "Hackers Exploit Zero-Day Vulnerability in Cloud Services",
-        "description": "A zero-day vulnerability in popular cloud services is being actively exploited by hackers. Patch your systems now.",
-        "link": "https://example.com/cloud-security-news"
+        "description": "Hackers are exploiting a zero-day vulnerability in popular cloud services, causing widespread disruptions.",
+        "link": "https://example.com/hacking-news",
+        "category": "hacking"
+    },
+    {
+        "title": "Cloud Security Best Practices for 2023",
+        "description": "Learn about the best practices for securing your cloud infrastructure in 2023.",
+        "link": "https://example.com/cloud-security-news",
+        "category": "cloud-security"
     }
 ]
