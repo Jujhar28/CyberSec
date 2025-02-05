@@ -1,6 +1,4 @@
 const Parser = require('rss-parser');
-const fs = require('fs');
-const path = require('path');
 
 module.exports = async (req, res) => {
     try {
@@ -16,18 +14,10 @@ module.exports = async (req, res) => {
             category: "all" // Add a default category or extract it from the feed
         }));
 
-        // Ensure the `data` directory exists
-        const dataDir = path.join(__dirname, '../data');
-        if (!fs.existsSync(dataDir)) {
-            fs.mkdirSync(dataDir);
-        }
-
-        // Save news data to a JSON file
-        fs.writeFileSync(path.join(dataDir, 'news.json'), JSON.stringify(newsData, null, 2));
-
-        res.status(200).json({ message: 'News data updated successfully!' });
+        // Return the news data as the API response
+        res.status(200).json(newsData);
     } catch (error) {
-        console.error('Error fetching or saving news:', error);
-        res.status(500).json({ error: 'Failed to update news data' });
+        console.error('Error fetching news:', error);
+        res.status(500).json({ error: 'Failed to fetch news data' });
     }
 };
