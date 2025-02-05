@@ -12,10 +12,6 @@
   ],
   "routes": [
     {
-      "src": "/data/news.json",
-      "dest": "/public/data/news.json"
-    },
-    {
       "src": "/api/fetch-news",
       "dest": "/api/fetch-news.js"
     },
