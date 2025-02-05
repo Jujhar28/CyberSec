@@ -16,6 +16,10 @@
       "dest": "/api/fetch-news.js"
     },
     {
+      "src": "/data/news.json",
+      "dest": "/public/data/news.json"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/$1"
     }
