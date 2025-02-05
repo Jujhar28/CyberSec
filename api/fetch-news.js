@@ -1,12 +1,20 @@
-const axios = require('axios');
+const Parser = require('rss-parser');
 const fs = require('fs');
 const path = require('path');
 
 module.exports = async (req, res) => {
     try {
-        const rssFeedUrl = 'https://feeds.feedburner.com/TheHackersNews';
-        const response = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`);
-        const newsData = response.data.items;
+        const parser = new Parser();
+        const rssFeedUrl = 'https://feeds.feedburner.com/TheHackersNews'; // Replace with your desired RSS feed
+        const feed = await parser.parseURL(rssFeedUrl);
+
+        // Format the news data
+        const newsData = feed.items.map(item => ({
+            title: item.title,
+            description: item.contentSnippet || item.content,
+            link: item.link,
+            pubDate: item.pubDate
+        }));
 
         // Ensure the `data` directory exists
         const dataDir = path.join(__dirname, '../data');
