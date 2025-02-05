@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and display news
     async function fetchNews(category = 'all', searchQuery = '') {
         try {
-            const response = await fetch('/data/news.json'); // Fetch from the backend
+            const response = await fetch('/api/fetch-news'); // Fetch from the API
             if (!response.ok) throw new Error('Failed to fetch news data');
             const data = await response.json();
 
