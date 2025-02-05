@@ -1,26 +1,23 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "public/**",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "api/fetch-news.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/data/news.json",
-        "dest": "/public/data/news.json",
-        "headers": {
-          "Cache-Control": "public, max-age=3600"
-        }
-      },
-      {
-        "src": "/api/fetch-news",
-        "dest": "/api/fetch-news.js"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/fetch-news.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/data/news.json",
+      "dest": "/api/fetch-news.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}
