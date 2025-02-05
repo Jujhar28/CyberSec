@@ -1,0 +1,202 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333333;
+    --accent-color: #007bff;
+    --border-color: #e0e0e0;
+    --card-bg-color: #ffffff;
+    --header-bg: linear-gradient(135deg, #007bff, #00bfff);
+    --header-text-color: #ffffff;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    --card-bg-color: #1e1e1e;
+    --header-bg: linear-gradient(135deg, #333333, #121212);
+    --header-text-color: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#search {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--header-text-color);
+    outline: none;
+}
+
+#search::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--header-text-color);
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+aside {
+    width: 250px;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+aside h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+aside button:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+#news-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.news-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.news-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.news-card p {
+    margin: 0;
+    color: #666666;
+}
+
+.news-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    #sidebar-toggle {
+        display: block;
+    }
+
+    #news-container {
+        grid-template-columns: 1fr;
+    }
+}

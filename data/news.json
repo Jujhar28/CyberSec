@@ -1,0 +1,17 @@
+[
+    {
+        "title": "New Malware Attack Targets Windows Users",
+        "description": "A new strain of malware has been discovered targeting Windows users. Experts advise updating your system immediately.",
+        "link": "https://example.com/malware-news"
+    },
+    {
+        "title": "Major Data Breach at XYZ Corporation",
+        "description": "XYZ Corporation has reported a data breach affecting millions of users. Sensitive information may have been compromised.",
+        "link": "https://example.com/data-breach-news"
+    },
+    {
+        "title": "Hackers Exploit Zero-Day Vulnerability in Cloud Services",
+        "description": "A zero-day vulnerability in popular cloud services is being actively exploited by hackers. Patch your systems now.",
+        "link": "https://example.com/cloud-security-news"
+    }
+]

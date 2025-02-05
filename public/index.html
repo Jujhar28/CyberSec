@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecNews Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>SecNews Hub</h1>
+        <p>Your one-stop destination for the latest cybersecurity news.</p>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search news...">
+            <button id="dark-mode-toggle">🌙</button>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <button id="sidebar-toggle">☰</button>
+            <h2>Categories</h2>
+            <ul>
+                <li><button data-category="all">All</button></li>
+                <li><button data-category="malware">Malware</button></li>
+                <li><button data-category="data-breaches">Data Breaches</button></li>
+                <li><button data-category="hacking">Hacking</button></li>
+                <li><button data-category="cloud-security">Cloud Security</button></li>
+            </ul>
+        </aside>
+        <section id="news-container">
+            <!-- News articles will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer>
+        <p>Powered by RSS feeds from The Hacker News, BleepingComputer, and more.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
