@@ -146,9 +146,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Let’s connect and chat about all things tech!
 
-- LinkedIn: Your LinkedIn Profile
-- GitHub: Your GitHub Profile
-- Email: your.email@example.com
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/jujhar-singh-4270b9294/)
+- Email: jujhar.cyber@gmail.com
 
 🔗 **Live Demo**: [https://secnews-tau.vercel.app/](https://secnews-tau.vercel.app/)
 
