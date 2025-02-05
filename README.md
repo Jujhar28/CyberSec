@@ -39,19 +39,6 @@
 
 ---
 
-## **Screenshots** 📸
-
-![Homepage](screenshots/homepage.png)  
-*Homepage with latest news articles.*
-
-![Dark Mode](screenshots/dark-mode.png)  
-*Dark mode for comfortable reading.*
-
-![Category Filtering](screenshots/category-filtering.png)  
-*Filter news by category.*
-
----
-
 ## **Getting Started** 🛠️
 
 ### **Prerequisites**
