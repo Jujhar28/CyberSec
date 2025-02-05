@@ -1,5 +1,3 @@
-import { Analytics } from '@vercel/analytics';
-
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -77,7 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial fetch
     fetchNews();
-
-    // Render Analytics
-    Analytics();
 });
