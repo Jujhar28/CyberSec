@@ -1,21 +1,16 @@
 {
   "name": "secnews-hub",
   "version": "1.0.0",
-  "description": "A modern web app that fetches and displays the latest cybersecurity news.",
+  "description": "A cybersecurity news aggregator app.",
   "main": "api/fetch-news.js",
   "scripts": {
-    "start": "node api/fetch-news.js",
-    "dev": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"
   },
   "devDependencies": {
-    "@vercel/node": "^2.15.4",
-    "vercel": "^32.0.0"
-  },
-  "engines": {
-    "node": "18.x"
+    "vercel": "^28.16.11"
   }
 }
